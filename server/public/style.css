@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  display: block;
+  width: 450px;
+  margin-bottom: 1rem;
+  padding: 5px;
+}

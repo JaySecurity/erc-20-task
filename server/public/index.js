@@ -12,13 +12,17 @@ async function handleClick(e) {
     return;
   }
   const url = `/api/erc/${contract.value}/${holder.value}`;
+  console.log(url);
 
   try {
     result.textContent = 'Loading';
-    const res = await axios.get(url);
-    console.log(res);
-    result.textContent = res.data.result;
-
-    console.log('Done');
-  } catch (err) {}
+    const res = await axios.get(url, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    result.textContent = res.data.tokens;
+  } catch (err) {
+    console.log(err);
+  }
 }
